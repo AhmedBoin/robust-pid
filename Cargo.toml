@@ -1,0 +1,45 @@
+[package]
+name = "robust-pid"
+version = "0.1.0"
+edition = "2021"
+authors = ["Mohamed A.Taha <ahmed.boin@gmail.com>"]
+license = "MIT OR Apache-2.0"
+description = "Production-grade PID controller for safety-critical systems"
+repository = "https://github.com/Ahmed.Boin/robust-pid"
+keywords = ["pid", "control", "aerospace", "embedded", "no-std"]
+categories = ["embedded", "no-std", "science"]
+
+[dependencies]
+num-traits = { version = "0.2", default-features = false }
+serde = { version = "1.0", optional = true, default-features = false, features = [
+    "derive",
+] }
+
+[dev-dependencies]
+# For examples only
+rand = "0.9.2"
+
+[features]
+default = ["std"]
+std = ["num-traits/std"]
+libm = ["num-traits/libm"] # For no_std with float support
+
+[[example]]
+name = "basic_temperature"
+required-features = ["std"]
+
+[[example]]
+name = "aircraft_pitch"
+required-features = ["std"]
+
+[[example]]
+name = "rocket_attitude"
+required-features = ["std"]
+
+[[example]]
+name = "drone_altitude"
+required-features = ["std"]
+
+[[example]]
+name = "error_correction"
+required-features = ["std"]
