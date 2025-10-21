@@ -15,6 +15,20 @@ A production-grade PID controller for safety-critical systems including aerospac
 - **`no_std` compatible** for embedded systems
 - **Generic over float types** (f32, f64)
 
+## Learn PID Design — Step by Step
+
+If you're new to control systems or want to understand how to design, tune, and analyze a PID controller, check out the complete design guide:
+
+**[Complete PID Controller Design Guide →](https://github.com/AhmedBoin/robust-pid/blob/main/Complete_PID_Controller_Guide.md)**
+
+This document explains:
+- The mathematical foundation of PID control  
+- Practical tuning techniques (Ziegler–Nichols, Cohen–Coon, etc.)  
+- Anti-windup and derivative filtering design  
+- Example simulations and tuning workflow  
+
+Perfect for both beginners and professionals who want deeper insight into robust control design.
+
 ## Quick Start
 ```rust
 use robust_pid::{PidBuilder, AntiWindupMode, DerivativeMode};
