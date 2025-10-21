@@ -16,13 +16,12 @@ serde = { version = "1.0", optional = true, default-features = false, features =
 ] }
 
 [dev-dependencies]
-# For examples only
 rand = "0.9.2"
 
 [features]
 default = ["std"]
 std = ["num-traits/std"]
-libm = ["num-traits/libm"] # For no_std with float support
+libm = ["num-traits/libm"]
 
 [[example]]
 name = "basic_temperature"
